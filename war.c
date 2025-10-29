@@ -2,6 +2,7 @@
 #include <string.h>
 
 #define QTD 5
+#define TROPAS_PADRAO 300
 
 struct Territorio {
     char nome[50];
@@ -17,6 +18,7 @@ int main() {
     printf("========================================\n");
     printf("BEM-VINDO AO WAR\n");
     printf("========================================\n");
+    printf("- Cada territorio inicia com %d tropas.\n", TROPAS_PADRAO);
     getchar();
 
     printf("Nome do mapa: ");
@@ -33,8 +35,9 @@ int main() {
         printf("Cor: ");
         fgets(t[i].cor, 20, stdin);
         t[i].cor[strcspn(t[i].cor, "\n")] = '\0';
+
+        t[i].tropas = TROPAS_PADRAO;
     }
 
     return 0;
 }
-
