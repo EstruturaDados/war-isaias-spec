@@ -11,14 +11,16 @@ struct Territorio {
 };
 
 int main() {
-    char nomeMapa[50];
     struct Territorio t[QTD];
+    char nomeMapa[50];
     int i;
 
     printf("========================================\n");
     printf("BEM-VINDO AO WAR\n");
     printf("========================================\n");
+    printf("- Cadastro do mapa com %d territorios.\n", QTD);
     printf("- Cada territorio inicia com %d tropas.\n", TROPAS_PADRAO);
+    printf("Pressione ENTER para continuar.\n");
     getchar();
 
     printf("Nome do mapa: ");
@@ -37,6 +39,13 @@ int main() {
         t[i].cor[strcspn(t[i].cor, "\n")] = '\0';
 
         t[i].tropas = TROPAS_PADRAO;
+    }
+
+    printf("\n=== MAPA: %s ===\n", nomeMapa);
+    printf("%-20s | %-15s | %-6s\n", "Nome", "Cor", "Tropas");
+    printf("---------------------------------------------\n");
+    for (i = 0; i < QTD; i++) {
+        printf("%-20s | %-15s | %-6d\n", t[i].nome, t[i].cor, t[i].tropas);
     }
 
     return 0;
