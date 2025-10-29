@@ -11,7 +11,7 @@ struct Territorio {
 
 int main() {
     char nomeMapa[50];
-    struct Territorio t[QTD];
+    struct Territorio t[QTD]; // vetor estático com 5 territórios
 
     printf("========================================\n");
     printf("BEM-VINDO AO WAR\n");
@@ -26,3 +26,4 @@ int main() {
     printf("Mapa: %s\n", nomeMapa);
     return 0;
 }
+
