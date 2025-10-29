@@ -1,16 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
+#define QTD 5
+
+struct Territorio {
+    char nome[50];
+    char cor[20];
+    int tropas;
+};
+
 int main() {
     char nomeMapa[50];
+    struct Territorio t[QTD];
 
     printf("========================================\n");
     printf("BEM-VINDO AO WAR\n");
     printf("========================================\n");
-    printf("Instrucoes:\n");
-    printf("- Nesta fase, cadastro do mapa.\n");
-    printf("- Cada territorio tem nome, cor e tropas fixas.\n");
-    printf("\nPressione ENTER para continuar.\n");
+    printf("Pressione ENTER para continuar.\n");
     getchar();
 
     printf("Nome do mapa: ");
@@ -20,4 +26,3 @@ int main() {
     printf("Mapa: %s\n", nomeMapa);
     return 0;
 }
-
